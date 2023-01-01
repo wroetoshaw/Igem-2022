@@ -1,0 +1,169 @@
+
+{% extends "layout.html" %}
+  
+{% block title %}Wet-Lab{% endblock %}
+{% block lead %}This award is designed to celebrate exemplary work done in plant synthetic biology.{% endblock %}
+
+{% block page_content %}
+
+
+<main class="theme-project">
+  <div class="custome-container">
+    <div class="row">
+      <div class="sidebar">
+      <div class="nav-bar-description" id="contents">
+        <ul>
+          <li>
+            <span><div></div></span><a href="#WetLab">Wet-lab</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Final">Final Gene</a>
+          </li>
+     
+          <li>
+            <span><div></div></span><a href="#faq">FAQ</a>
+          </li>
+         
+          <li>
+            <span><div></div></span><a href="#References">References</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+       <div class="content">
+                        <article>
+                            <h1 id="WetLab">Wet-Lab</h1>
+                            <p>
+                             After molecular dynamics simulation, the two double mutants (M198G and M298A, Y299A and Y230A) were chosen and were compared against the wild type small laccase. The aim was to increase the stability of the enzyme. We also looked into ways to increase the expression of the enzyme. A simple and effective approach in doing so would be using a high copy number vector. After talking to multiple industry and academia experts, a special promoter named Tac was chosen for the research. According to the scientific literature it can increase the expression 9-11 times. To ease the purification process, a FLAG tag sequence was adopted. Anti-flag antibody chromatography columns was used to obtain a high purity enzyme.
+                      </p>
+                            <p>
+                              The small laccase enzyme is naturally produced in bacteria Streptomyces coelicolor. This organism is the source of our gene-of-interest. As reported in the literature, small laccase is produced intracellularly in the bacteria. To induce the bacteria to secrete the enzyme, a rather common approach was chosen. A signal peptide OmpA was added to ease the co-translational transport or topogenesis. Specific restriction sites were chosen in order to enable efficiently ligation at later stages. So considering all these points, a gene construct including small laccase was constructed. 
+                            </p>
+                            <h1 id="Final">Final Gene Construct</h1>
+                            <div class="image">
+                              <img src="https://static.igem.wiki/teams/4372/wiki/wetlab-1.png" style="width:75%;">
+                              <p>
+                                Fig - Modified Small laccase gene sequence with OmpA, FLAG and restriction sites.
+                                </p>
+                                
+                            </div>
+                            <div class="image">
+                              <img src="https://static.igem.wiki/teams/4372/wiki/wetlab1.png">
+                            </div>
+                            <p>
+                              The sequence for expression in E.coli BL21 was optimised. After deciding the structure of the construct, the selected double mutant sequence was created and order was placed. Two vectors from sigma one was selected for cloning (pUC based) and one for expression. Fortunately, a expression vector was found that possesses the tac promoter, a signal peptide and the FLAG tag. So, the sequence based on the selected  vector was modified. 
+
+                            </p>
+                            <div class="image">
+                              <img src="https://static.igem.wiki/teams/4372/wiki/wetlab-2.png" style="width:75%;">
+                              <p>Fig - Expression vector with the designed construct
+                              </p>
+                            </div>
+                            <p>As the vector already has signal peptide and FLAG tag, the sequence was modified to include a restriction site.
+                            </p>
+                            <div class="image">
+                              <img src="https://static.igem.wiki/teams/4372/wiki/wetlab-3.png" style="width:75%;">
+                              
+                              <p style=" font-size: 0.8rem;"> GACGAATTCATGAAAAAAACGGCAATTGCCATCGCAGTGGCTCTGGCAGG
+                                ATTTGCGACAGTAGCCCAGGCTATGGATCGCCGTGGATTTAACCGGCGGG
+                                TATTATTAGGCGGCGCCGCTGCTGCTACCTCTTTAAGCATTGCGCCGGAG
+                                GTAGCAGGGGCCGCCCCTGCAGCCAAGGGTATCACTGCACGGACGGCACC
+                                TGCAGGAGGGGAGGTCCGTCATCTGAAAATGTATGCGGAAAAATTGGCTG
+                                ACGGCCAAATGGGCTATGGTTTTGAAAAGGGTAAAGCATCCGTCCCTGGC
+                                CCATTGATTGAAGTAAATGAAGGCGATACCTTACACATCGAATTCACGAA
+                                CACCATGGATGTGAGAGCTAGTTTGCACGTACACGGTTTGGATTACGAGA
+                                TTTCCTCAGACGGGACGGCAATGAATAAAAGCGACGTGGAGCCAGGCGGC
+                                ACACGGACCTATACCTGGCGTACACATAAACCTGGTCGCCGCGACGACGG
+                                GACATGGCGCCCGGGGTCAGCAGGCTATTGGCACTACCACGATCATGTCG
+                                TAGGAACGGAACATGGTACGGGTGGCATCCGGAACGGATTGTACGGCCCG
+                                GTGATCGTGAGACGCAAAGGTGATGTTTTGCCCGACGCGACTCATACCAT
+                                CGTCTTCAACGATATGACCATCAATAACCGCAAGCCGCACACTGGTCCGG
+                                ACTTTGAGGCTACTGTGGGTGACCGCGTGGAAATTGTCATGATAACTCAC
+                                GGTGAATACTACCACACGTTTCACATGCACGGTCATAGATGGGCCGACAA
+                                TCGGACAGGCATTTTGACCGGGCCGGACGATCCATCTCGGGTTATCGATA
+                                ACAAGATTACAGGACCGGCCGATAGCTTCGGGTTTCAGATCATTGCAGGC
+                                GAAGGGGTGGGTGCCGGTGCATGGATGTACCACTGCCACGTGCAGTCACA
+                                TTCTGACATGGGCATGGTCGGGTTGTTTTTGGTTAAGAAGCCTGATGGAA
+                                CGATTCCGGGTTATGAACCTCATGAACATGGCGGGGCTACTGCGAAAAGT
+                                GGGGAATCAGGTGAACCTACAGGCGGTGCAGCCGCTCATGAGCATGAACA
+                                CGGATCCATT
+                              
+                              </p>
+                              <p>
+                                Fig. Wild sequence
+
+                              </p>
+                              <p style="font-size: 0.8rem;">GACGAATTCATGGATAGAAGGGGATTTAACCGCCGTGTGTTACTTGGCGG CGCAGCTGCTGCTACAAGCTTATCTATCGCCCCCGAGGTCGCCGGTGCAG CCCCAGCGGCTAAAGGAATTACTGCTCGCACTGCACCAGCAGGAGGTGAA GTTCGGCACTTAAAGATGTACGCTGAAAAGTTGGCAGATGGGCAGATGGG TACCAACTCCGAAAAGGGAAAGGCCAGCGTACCTGGTCCATTAATCGAGG TGAACGAGGGCGACACATTGCACATTGAATTCACAAATACTATGGATGTA CGGGCTTCGCTGCACGTTCATGGGTTGGACTACGAAATCTCATCTGATGG CACTGCAATGAACAAATCCGACGTAGAACCTGGGGGCACGCGCACATACA CATGGCGCACTCACAAGCCAGGACGCAGAGACGACGGAACATGGCGGCCG GGTAGCGCGGGGTATTGGCATTACCATGATCACGTTGTCGGGACAGAGCA TGGCACAGGAGGCATAAGAAACGGGTTATATGGTCCGGTGATAGTGCGTC GCAAGGGCGACGTTCTGCCAGATGCTACCCACACGATCGTATTCAATGAT ATGACCATAAACAACCGTAAACCCCACACGGGTCCGGACTTTGAAGCAAC CGTTGGTGACCGGGTTGAAATCGTGATGATAACACACGGAGAAGCCGCTC ACACCTTCCACATGCACGGACATAGATGGGCCGACAATAGAACCGGTATA TTAACTGGGCCTGACGACCCGAGCCGCGTAATCGACAATAAAATCACGGG CCCCGCTGACTCATTCGGCTTCCAAATAATAGCGGGTGAAGGAGTCGGTG CTGGCGCGTGGATGTATCATTGCCACGTCCAAAGCCATAGTGATATGGGA ATGGTAGGTCTTTTTTTAGTGAAAAAGCCCGATGGCACCATTCCTGGGTA CGAACCCCACGAACACGGGGGAGCAACTGCCAAGTCAGGAGAAAGTGGAG AACCTACTGGCGGAGCGGCAGCCCACGAGCACGAGCACGGATCCATT
+                              </p>
+                              <p>Fig.  Mutated Sequence 1 - Y229A and Y230A optimized 
+                              </p>
+                              <p style="font-size: 0.8rem;">GACGAATTCATGGATAGAAGGGGATTTAACCGCAGAGTTCTGCTTGGTGG GGCTGCAGCGGCGACTTCACTGTCAATAGCGCCGGAAGTTGCCGGGGCAG CCCCTGCTGCCAAAGGGATTACCGCTCGCACCGCACCTGCTGGAGGGGAA GTCCGGCATCTGAAGATGTATGCCGAGAAGTTGGCAGACGGTCAGATGGG ATACGGGTTCGAGAAGGGTAAAGCGTCGGTTCCTGGTCCCTTGATAGAAG TAAACGAGGGCGACACGCTGCATATAGAATTTACCAATACCATGGACGTG CGGGCATCGTTACACGTACATGGCCTTGACTACGAAATCTCGTCCGACGG GACTGCCATGAATAAGTCCGACGTTGAGCCGGGGGGGACACGGACGTACA CTTGGAGAACGCACAAACCCGGCCGTCGCGATGATGGCACTTGGCGCCCG GGCAGTGCTGGCTATTGGCATTATCATGACCACGTCGTGGGCACCGAACA TGGAACGGGGGGTATACGCAACGGCCTGTATGGACCTGTCATCGTCCGGC GGAAAGGTGACGTTTTACCGGACGCTACTCACACCATAGTCTTTAATGAT GGTACGATAAACAATCGCAAACCGCATACGGGCCCAGACTTCGAAGCTAC GGTCGGTGATCGTGTTGAAATCGTTATGATCACTCATGGAGAGTATTATC ATACTTTCCATATGCACGGACACCGGTGGGCCGACAATAGAACCGGCATT TTGACCGGGCCGGACGACCCAAGCCGCGTAATTGATAACAAAATCACCGG TCCAGCTGACTCGTTCGGTTTTCAGATCATTGCTGGGGAAGGCGTGGGTG CAGGGGCGTGGATGTATCACTGTCACGTCCAATCCCATTCGGACATGGGA GCTGTGGGTTTGTTTTTGGTAAAAAAGCCAGACGGAACAATTCCAGGATA TGAGCCACACGAGCACGGCGGTGCCACCGCAAAGTCCGGGGAGTCAGGGG AACCGACGGGTGGTGCTGCTGCGCATGAGCACGAGCACGGATCCATT
+                              </p>
+                              <p>Fig.  Mutated Sequence 2 - M198G and M298A optimized 
+                              </p>
+                            </div>
+                            <p>
+                              Due to delay in the delivery of the vector from Sigma, we tried isolating pRSET-B plasmids. But due to repeated RNA contamination during plasmid isolation, we had to shift to pET-28-A.
+                            </p>
+                            <div class="image">
+                              <img src="https://static.igem.wiki/teams/4372/wiki/wetlab4.png" style="width:75%;">
+                              <p>Fig - pET-28-A.
+                              </p>
+                            </div>
+                           <p> Since we had to change our plasmid we had to make changes to our gene sequence to accommodate the OmpA and Flag Tag sequences:
+                             </p>
+                             <div class="image">
+                              <img src="https://static.igem.wiki/teams/4372/wiki/wetlabnewseq.png" style="width:75%;">
+                              <p>Fig - Modified Gene Sequence.
+                              </p>
+                            </div>
+<p>Since the EcoR-1 restriction site is upstream(5’) and the BamH-1 site is downstream(3’), which is the inverse of what we need, we made primers containing the restriction sites in the order we need: 1) Forward primer containing EcoR-1 recognition site, 2) Reverse primer containing BamH-1 site. We ran PCR so that the gene of interest is amplified but the restriction sites are left as overhangs. In this way we change the orientation of the recognition to our use. We also designed primers for other restriction sites so as to use them if non-target restriction digestion occurs. For Eg:
+                            </p>
+                            <div class="image">
+                              <img src="https://static.igem.wiki/teams/4372/wiki/wetlab5.svg" style="width:75%;">
+                              <p>Fig - Modified Gene Sequence.
+                              </p>
+                              </div>
+                            <p>We performed transformation in DH5-alpha cells. The basic idea here is to clone the gene in DH5-alpha for storage using a suitable cloning vector. This was followed by the isolation of plasmid and expression in BL21 using a suitable expression vector. PCR was done to confirm the transformation process.But we failed to express the gene. We hypothesize that the gene was ligated in an inverse manner. 
+                            </p>
+
+                            <p>
+                              We planned the following:
+                            <p/>
+
+                            <ol type="1">
+  <li>After selection, a specific quantity of IPTG will be added for the induction of SLAC expression. Western blotting will be done using anti-flag antibodies with FITC for the confirmation and quantification of expression.</li>
+  <li>A crude purification will be done to extract the enzyme and test it for enzyme activity. At this step, anti-flag chromatography columns will be used to get a high purity of enzymes. Later, enzyme optimization, activity testing in buffer and in manure, and a comparison of the activity of the mutants and wild-type against tetracycline degradation will be done. </li>
+  
+</ol>
+
+
+                          
+
+                            <h1 id="faq">FAQ:</h1>
+                            <ol>
+                              <li><strong>What is a signal peptide?
+                              </strong><br>
+                              A signal peptide is a short peptide (16-20 amino acids long) present at the N-terminus of most newly synthesized proteins that are destined toward the secretory pathway. These proteins include those that reside either inside certain organelles, secreted from the cell, or inserted into most cellular membranes. 
+Significance of signal peptide Signal peptide plays an important role in protein targeting and protein translocation in both prokaryotic and eukaryotic cells. 
+                            </li>
+                            <li><strong>Why are we using E.coli (BL21) as our expression host?
+                            </strong>
+                            A popular non-T7 expression E. coli strain that is suited for protein expression and transformation is called BL21 Competent E. coli. The BL21 strain does not express T7 RNA polymerase. BL21 alpha is primarily used for protein production as opposed to plasmid DNA production. 
+
+                          </li>
+                            </ol>
+                            
+                        </article>
+
+                        <article id="references">
+                            <h1 id="References">References</h1>
+                            <p><a class="effect-underline">
+                                [1] https://www.promega.in/products/cloning-and-dna-markers/cloning-vectors-and-kits/pfn29-and-pfc30-his6halotag-t7-flexi-vectors/?catNum=G8261
+
+                            </a></p>
+                        </article>
+    </div>
+  </div>
+</main>
+{% endblock %}

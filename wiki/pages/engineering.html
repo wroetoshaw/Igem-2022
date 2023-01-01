@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+  
+{% block title %}Engineering{% endblock %}
+{% block lead %}Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle.{% endblock %}
+
+{% block page_content %}
+
+
+<main class="theme-project">
+  <div class="custome-container">
+    <div class="row">
+      <div class="sidebar">
+        <div class="nav-bar-description" id="contents">
+          <ul>
+            <li>
+              <span><div></div></span><a href="#engineering">Introduction</a>
+            </li>
+            <li>
+              <span><div></div></span><a href="#2">DBTL Cycle</a>
+            </li>
+
+          
+            <li>
+              <span><div></div></span><a href="#3">Data Output</a>
+            </li>
+            <li>
+              <span><div></div></span><a href="#4">Outcome</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+       <div class="content">
+                        <article>
+                            <h1 id="engineering">Introduction</h1>
+                            <p>
+                              Our enzyme Tetonin is a modified form of SLac (Small Laccase), which in itself, is a novel form of laccase. There are very little studies which have explored the capabilities of SLac as a potential antibiotic degrading enzyme to combat antibiotic resistance (ABR) has not been explored, we have tried to do the same in our project. Here we have focused upon solving the ABR problem in soil by degrading tetracycline using our modified Slac. 
+                            </p>
+                            
+                            <h1 id="2">DBTL Cycle</h1>
+                            <hr>
+                            <p>
+                              
+
+                              Our engineering mindset is similar to that of iGEM’s Design → Build → Test → Learn cycle. We have incorporated the same values in our project as such: 
+                                                          </p>
+                            
+                          
+                            <div class="image">
+                              <img style="width:65%;"src="https://static.igem.wiki/teams/4372/wiki/eng-main.svg">
+                            </div>
+                            
+                            <table class="blueTable">
+                              <thead>
+                              <tr>
+                              <th>Phases</th>
+                              <th>In-silico</th>
+                              <th>Wet-Lab</th>
+                              </tr>
+                              </thead>
+                            
+                              <tbody>
+                              <tr>
+                              <td>Design</td>
+                              <td>Slac sequence - Obtained from Dr. Deepti Yadav. This sequence acts as the basis for the entire project in all aspects. 
+                              
+                              Math modeling - SimBiology was chosen for modeling the concentration of IPTG and how it would affect enzyme kinetics
+                              
+                              MD simulation kit - Desmond tool was chosen for running MD Simulations. AutoDock and AutoDock Vina were also used to verify the results obtained</td>
+                              <td>Reagents - IPTG, guaiacol, petri plates, test-tubes, media components, antibiotics, manure and soil samples (from Vellore, Bangalore)
+                              
+                              Host systems - E. coli DH5ɑ as a cloning system and E. coli BL21 as an expression system
+                              
+                              Protocols - Protocols for plasmid isolation, cloning, PCR, gel elution,  recombinant protein production, protein purification, mutant selection, molecular docking simulations, enzyme kinetics and modeling  were selected after an extensive literature review
+                              
+                              Results - To be provided as images and datasets
+                              </td>
+                              </tr>
+                              <tr>
+                              <td>Build</td>
+                              <td>Mutant building - SnapGene and Genious Prime were employed to modify the Slac sequence. Literature review and protein visualization was done to understand the enzyme’s catalytic center. It was found that the substrate binds near the copper cluster. Hence codon optimization and sequence modification was performed.</td>
+                              <td>Primer - Primers for native and mutant sequences were synthesized for amplification. Primers for GOI were synthesized with an overhang to incorporate it in the plasmid
+                              
+                              GOI - The gene of interest contains a flag tag, sequence and signal peptide for extracellular secretion
+                              
+                              Restriction site formation - The restriction sites of XbaI, HindIII, BamH1 and EcoR1 were created in the gene of interest using overhangs from the primer
+                              </td>
+                              </tr>
+                              <tr>
+                              <td>Test</td>
+                              <td>11 mutants were generated from gene modification and codon optimization after ;literature review. Docking was performed and the best mutants were selected after continuous testing. 2 substitutions were generated:
+                              Methionine substitution - M198G and M298A.
+                              Tyrosine substitution - Y229A and Y230A
+                              
+                              Each substitution had a comparison between double mutant, single mutant and the native sequence.
+                              
+                              Learning phase was implemented simultaneously to obtain the best mutants. 
+                              
+                              Post docking, the double mutants were sent for MD simulations and their data is presented as a plot between RMSD vs Time.</td>
+                              <td></td>
+                              </tr>
+                              <tr>
+                              <td>Learn</td>
+                              <td>MD results gave a clear cut idea that the project was moving in the right direction. The selected mutants gave optimal values and proved to be better than the native protein.
+                              
+                              Thus the mutant sequences were ordered and were used for wet-lab studies</td>
+                              <td></td>
+                              </tr>
+                              </tbody>
+                              </table>
+                              <br>
+                              <br>
+                              <hr>
+
+                            <h1 id="3">Data Output</h1>
+                            <h2>MD Simulation Data</h2>
+                            <div class="image">
+                              <img style="width:65%;"src="https://static.igem.wiki/teams/4372/wiki/engineering.png">
+                              <p> Figure 1: MD Simulation output graph obtained for M198G and M298A; Y229A and Y230A                            </p>
+                              <p>
+
+The graph explains that the double mutant Y299A and Y230A is more stable than the single mutants Y229A and Y230A which are suggested mutant in the literature.
+We can clearly see that our double mutant is very stable over 100ns compare to the existing mutant Y229A and Y230A
+So MD results have provided assurity to continue our study with the predicted double mutant M198G and M298A.
+
+                              </p>
+                            </div>
+                            <h2>Primers for addition of new restriction sites:</h2>
+                            <p>For XbaI and HindIII:
+                              </p>
+                            <div class="image">
+                              <img style="width:65%;"src="https://static.igem.wiki/teams/4372/wiki/wetlab5.svg">
+</div>
+                               <p>
+                                 For BamH1 and EcoR1:
+                                 </p>
+                                 <div class="image">
+                               <img style="width:65%;"src="https://static.igem.wiki/teams/4372/wiki/engg-p-2.png">
+                               </div>
+                               <p>
+                                 For Sgf1 and Pme1:
+                                 </p>
+<div class="image">
+                                <img style="width:65%;"src="https://static.igem.wiki/teams/4372/wiki/engg-p-3.png">
+                              
+                            </div>
+                            <hr>
+                            
+                            <h1 id="4">Outcome</h1>
+                            <div class="image">
+                              <img src="https://static.igem.wiki/teams/4372/wiki/eng-table.jpg">
+                            </div>
+                            
+                        </article>
+    </div>
+  </div>
+</main>
+{% endblock %}

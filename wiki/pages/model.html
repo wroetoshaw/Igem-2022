@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+  
+{% block title %}MATH Model{% endblock %}
+{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+
+{% block page_content %}
+
+<main class="theme-project">
+  <div class="custome-container">
+    <div class="row">
+      <div class="sidebar">
+      <div class="nav-bar-description" id="contents">
+        <ul>
+          <li>
+            <span><div></div></span><a href="#Inspiration">Inspiration</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Problem">Problem</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Implementation">Implementation</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Application">Application</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Goals">Goals</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#References">References</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+       <div class="content">
+                        <article>
+                            <h1 id="Math">Math Modeling write-up</h1>
+                            <p>
+                              Mathematical modeling done by our project to pictorially define how our enzyme is produced and the various limiting factors which can affect the reaction. It has been divided into 2 compartments based on scenario: the larger one takes place inside E.Coli bacteria and the other compartment takes place in the soil ecosystem. 
+                            </p>
+                            <p>
+                              In the compartments and species column a tabular description of the species included along with the parameter values are mentioned with the units to accurately validate the mathematical model. In our particular case units dimensional analysis has been turned off.
+                            </p>
+                            <p>
+                              In repeated assignments we input some repeated relations which depict a working relationship between two or more components in the model such that the model remains valid even if a change in the values of the involved components occurs. Each individual component in itself could involve multiple components which contributes to an overall net reaction of the involved component or could be unique in itself. For instance plasmid_lacI complex is a net relation of the plasmid interaction with lacI levels in the microenvironment. 
+
+                            </p>
+                            <p>
+                              The codes section accurately describes the differential equations of the various components of the model along with a description of how a change of a single component in the reaction can affect the production/degradation of the other components in the reaction. 
+
+                            </p>
+                            <h1 id="description">Math Model Description:</h1>
+                            <p>
+                              The initial slightly larger compartment depicts how the SLAC is produced in E.Coli with IPTG playing the role of an inducer. Inducer hence plays a very significant and limiting role in the overall production of SLAC. This Model which is based on the lac operon system has been divided into two compartments respectively:
+                            </p>
+                            <p>
+                              <ol>
+                                <li>The Larger compartment illustrates how SLAC (our enzyme) is produced in a bacterial system particularly in the E.Coli system.</li>
+                                <li>The smaller compartment illustrates how SLAC performs in a soil microenvironment. 
+                                </li>
+                              </ol>
+                              <br>
+                              Within the Bacterial Ecosystem the model works as follows:
+Due to the limiting role of the inducer in the bacterial system two scenarios have been considered for this particular model:
+                              <ol>
+                                <li>Presence of sufficient amount of inducer(above threshold level of IPTG in the bacteria)
+                                </li>
+                                <li>Absence of sufficient level of inducer (below threshold level of IPTG in the bacteria)
+ 
+                                </li>
+                              </ol>
+                            </p>
+                            <p>
+                              In the first scenario as depicted by the flow diagram, the protein formed by the lacI gene (which codes for the repressor protein) forms a complex with IPTG which then interacts with the plasmid. In this case the depicted laci_IPTG_plasmid complex formed can produce SLAC because, when the inducer is present, the repressor protein is inactivated which allows for RNA Polymerase to transcribe and finally proceed with translation to produce SLAC protein. 
+                            </p>
+                            <p>
+                              When sufficient amounts of IPTG is not present (the latter scenario) as depicted by the production of only plasmid_lacI_complex occurs. In this case concentration of IPTG is less resulting in an inability to neutralize the repressor protein. Hence the formed repressor protein with the DNA sequence at the operator region resulting in inhibition of transcription as well as translation because the repressor protein will prevent RNA Polymerase from binding to template DNA sequence. This results in no production of SLAC. Transcription1 and Translation1 in the flow diagram illustrate the process of lacI repressor protein formation resulting in plasmid_lacI_complex.
+                            </p>
+                            <p>
+                              <strong>In the soil Ecosystem:</strong><br>
+                              SLAC interacts with unmetabolized tetracycline present in the soil resulting in formation of a degraded product/ biotransformed product and a recovered version of SLAC enzyme depicted by SLAC* in the model. 
+                            </p>
+                            <h1 id="flowchart">FlowChart</h1>
+                            <div class="image">
+                              <img src="">
+                            </div>
+                            <p>
+                                In an effort to effectively degrade the antibiotic residues in the manure, we are using modified Laccase enzyme which can withstand a broader temperature and pH range and is thus ideal for a diversified Indian climate. We are employing expression in a bacterial system which is more efficient  than the conventionally used fungal system. Moreover, the use of a double promoter system and signal peptides increases protein expression and efficiency by multiple folds respectively. 
+                            </p>
+                            <h1 id="Application">Application</h1>
+                            <p>
+                                Antibiotic resistance is one of the most prevalent problems in this era and will only continue to grow and penetrate different levels of the ecosystem we live in and cause problems. Hence, a cohesive, multi-faceted approach to target this problem is the need of the hour and we, with our project, are working towards finding effective solutions in the environmental sector. 
+                            </p>
+                            <h1 id="Goals">Goals</h1>
+                            <p>
+                                To alter enzyme efficacy for tetracycline degradation: Our aim is to use a modified Laccase enzyme with a greater degradation efficiency and a biological system in E.Coli to break down unmetabolized antibiotics found in cattle waste. We are planning to achieve this by screening potential laccase sources through literature, running in-time simulations to select specific ones and then test them against tetracycline.
+                            </p>
+                        </article>
+
+                        <article id="references">
+                            <h1 id="References">References</h1>
+                            <p><a class="effect-underline">
+                                [1] Phillips I, Casewell M, Cox T, De Groot B, Friis C, Jones R, Nightingale C, Preston R, Waddell J. Does the use of antibiotics in food animals pose a risk to human health? A critical review of published data. J Antimicrob Chemother. 2004 Jan;53(1):28-52. doi: 10.1093/jac/dkg483. Epub 2003 Dec 4. PMID: 14657094.
+                            </a></p>
+                            <p><a class="effect-underline">
+                                [2] https://blog.igem.org/blog/2022/7/6/antibiotic-resistance
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [3] Founou, L. L, Founou, R. C, & Essack, S. Y. (2016). Antibiotic Resistance in the Food Chain: A Developing Country-Perspective. Frontiers in Microbiology, 7. doi:10.3389/fmicb.2016.01881 
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [4] https://www.medicalnewstoday.com/articles/323639#Global-use-of-antibiotics-in-animals
+                            </a> </p>
+                            <p><a class="effect-underline"> [5] Rolain, J.-M. (2013). Food and human gut as reservoirs of transferable antibiotic resistance encoding genes. Frontiers in Microbiology, 4. doi:10.3389/fmicb.2013.00173
+                                </a> </p>
+                            <p><a class="effect-underline">
+                                [6] https://www.sciencedaily.com/releases/2019/09/190916144006.htm
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [7] Chandra, R., & Chowdhary, P. (2015). Properties of bacterial laccases and their application in bioremediation of industrial wastes. Environmental science. Processes & impacts, 17(2), 326–342. https://doi.org/10.1039/c4em00627e
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [8] Yadav, D., Ranjan, B., Mchunu, N., Roes-Hill, M. L., & Kudanga, T. (2018). Secretory expression of recombinant small laccase from Streptomyces coelicolor A3(2) in Pichia pastoris. International journal of biological macromolecules, 108, 642–649. https://doi.org/10.1016/j.ijbiomac.2017.11.169
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [9] Zovo K, Pupart H, Van Wieren A, Gillilan RE, Huang Q, Majumdar S, Lukk T. Substitution of the Methionine Axial Ligand of the T1 Copper for the Fungal-like Phenylalanine Ligand (M298F) Causes Local Structural Perturbations that Lead to Thermal Instability and Reduced Catalytic Efficiency of the Small Laccase from Streptomyces coelicolor A3(2). ACS Omega. 2022 Feb 9;7(7):6184-6194. doi: 10.1021/acsomega.1c06668. PMID: 35224382; PMCID: PMC8867573
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [10] Santiago, G., de Salas, F., Lucas, M. F., Monza, E., Acebes, S., Martinez, Á. T., … Guallar, V. (2016). Computer-Aided Laccase Engineering: Toward Biological Oxidation of Arylamines. ACS Catalysis, 6(8), 5415–5423. doi:10.1021/acscatal.6b01460 
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [11] Xu KZ, Wang HR, Wang YJ, Xia J, Ma H, Cai YJ, Liao XR, Guan ZB. Enhancement in catalytic activity of CotA-laccase from Bacillus pumilus W3 via site-directed mutagenesis. J Biosci Bioeng. 2020 Apr;129(4):405-411. doi: 10.1016/j.jbiosc.2019.09.020. Epub 2019 Oct 28. PMID: 31672431.
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [12] Sherif M, Waung D, Korbeci B, Mavisakalyan V, Flick R, Brown G, Abou-Zaid M, Yakunin AF, Master ER. Biochemical studies of the multicopper oxidase (small laccase) from Streptomyces coelicolor using bioactive phytochemicals and site-directed mutagenesis. Microb Biotechnol. 2013 Sep;6(5):588-97. doi: 10.1111/1751-7915.12068. Epub 2013 Jul 1. PMID: 23815400; PMCID: PMC3918160.
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [13] Prins A, Kleinsmidt L, Khan N, Kirby B, Kudanga T, Vollmer J, Pleiss J, Burton S, Le Roes-Hill M. The effect of mutations near the T1 copper site on the biochemical characteristics of the small laccase from Streptomyces coelicolor A3(2). Enzyme Microb Technol. 2015 Jan;68:23-32. doi: 10.1016/j.enzmictec.2014.10.003. Epub 2014 Oct 23. PMID: 25435502.
+
+                            </a> </p>
+                        </article>
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+
+    <link href="{{url_for('static', filename = 'content.css')}}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %} | VIT_Vellore - iGEM 2022</title>
+
+</head>
+<body>
+  <!-- Navigation -->
+  {% include 'menu.html' %}
+
+  <!-- Header -->
+
+
+
+  <header class="d-flex justify-content-center">
+    <div class="custom-container {{self.title()}}">
+      <div id= "header-background" >
+      </div>
+      <div id="heading">
+        <h1>{{self.title()}}</h1>
+      </div>
+    </div>
+  </header>
+
+ 
+  </header>
+
+  <div class="container">
+    {% block page_content %}{% endblock %}
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  {% include 'footer.html' %}
+
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'jquery.min.js') }}"></script>
+
+   <script src="{{ url_for('static', filename = 'main.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+{% extends "layout.html" %}
+  
+{% block title %}Math Model{% endblock %}
+{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+
+{% block page_content %}
+
+<main class="theme-project">
+  <div class="custome-container">
+    <div class="row">
+      <div class="sidebar">
+        <div class="nav-bar-description" id="contents">
+          <ul>
+            <li>
+              <span><div></div></span><a href="#modelling">Math Modeling :</a>
+            </li>
+            <li>
+              <span><div></div></span><a href="#Description">Description </a>
+            </li>
+
+          
+            <li>
+              <span><div></div></span><a href="#Conclusion">Conclusion</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+       <div class="content">
+                        <article>
+                            <h1 id="modelling">Math Modeling :
+                            </h1>
+                            <p>
+                              Mathematical modeling done by our project to pictorially define how our enzyme is produced and the various limiting factors which can affect the reaction. 
+                              Our model tries to relate the concentration of IPTG with the protein production considering high levels of IPTG will cause cell-toxicity. We have used a simbiology plugin of MATLAB. This is an amazing tool that generates differential equations and the involved flux-balances based on the diagrams drawn on the diagram-panel.
+                                                          </p>
+                            <p>
+                              The model has been divided into 2 compartments based on scenario: the main compartment contains the reactions and the components related to IPTG induction and slac production. The second compartment represents the soil system where we tried to model slac activity against tetracycline.
+                            </p>
+                            <p>
+                              
+We have designed our protein to have a signal peptide for extracellular secretion of the enzyme. But we haven’t modeled the transport in our model.
+The basic steps of modeling a biological system to predict natural condition and dependencies is to: 
+
+                            </p>
+                            <p>
+                              <ul>
+                                <li>Make a rough model on the diagram-panel representing the proposed reaction</li>
+                                <li>Decide the type of reaction involved (Mass-action, hill-kinetics),species and other dependent variables</li>
+                                <li>Decide an approximate values of the constants and reaction rate based on literature </li>
+                                <li>Simulate the model</li>
+                                <li>After completing the experiments, compare the predicted and experimental data.</li>
+                                <li>Modify the model parameters and constant to represent the experimental result.</li>
+                                </ul>
+                            </p>
+                            <hr>
+                            <h1 id="Description">Math Model Description: 
+                            </h1>
+                            <div class="image">
+                              <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/igem-mat-model-full.png">
+                            </div>
+                            <p>
+                              Our plasmid contains an inducible promoter tac for small-laccase(gene-of-interest) production and a constitutive gene for continuous production of lacI protein (repressor).
+
+                            </p>
+                            <p>
+                              The binding of the repressor and the IPTG is co-operative so we have used hill-kinetics to model this part .
+                              For modeling the first part of the reaction we assumed a living bacterial cell whose plasmid contains a constitutive lacI (repressor) gene. According to the literature this repressor genes codes for a repressor protein that is produced continuously. This repressor binds to the operator of the gene and prevents the effective binding of the RNA polymerase to the promoter of the gene.
+                                                          </p>
+                            <p>
+                              When IPTG is present in the medium, it binds with the repressor and prevents effective binding of the repressor to the operator of the gene, thus allowing effective binding of RNA polymerase and transcription of the required protein.
+                              
+                            </p>
+                            <div class="image">
+                              <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/mat-model-compartment-1.png">
+                              <p>We tried to model this IPTG-lac based system in the first compartment of the model.</p>
+                            </div>
+                            <p>
+                              The binding of IPTG with the repressor is co-operative. But to keep the model simple we have modeled this reaction using mass action kinetics.
+It is assumed that plasmid_lacI_complex formation will lead to no expression. But in reality, there is always some amount of expression  even in the presence of the repressor.
+                            </p>
+                            <p>
+                              Initial average concentration of repressor per cell is taken from literature. Total number of DNA per cell is taken as the average copy number of plasmid vectors per cell. Some rate constants were taken from literature and some were assumed to get the desired outcome after simulation.
+
+                            </p>
+                            <p>Due to the limiting role of the inducer in the bacterial system two scenarios have been considered for this particular model:
+                              <ol>
+                                <li>Presence of sufficient amount of inducer(above threshold level of IPTG in the bacteria)</li>
+                                <li>Absence of sufficient level of inducer (below threshold level of IPTG in the bacteria)</li>
+                              </ol>
+                            </p>
+                            <p>In the first scenario as depicted by the flow diagram, the protein formed by the lacI gene (which codes for the repressor protein) forms a complex with IPTG which then interacts with the plasmid. In this case the depicted laci_IPTG_plasmid complex formed can produce SLAC because, when the inducer is present, the repressor protein is inactivated which allows for RNA Polymerase to transcribe and finally proceed with translation to produce SLAC protein. 
+                            </p>
+                            <p>
+                              When sufficient amounts of IPTG are not present (the latter scenario) as depicted by the production of only plasmid_lacI_complex occurs. In this case concentration of IPTG is less resulting in an inability to neutralize the repressor protein. Hence the formed repressor protein with the DNA sequence at the operator region resulting in inhibition of transcription as well as translation because the repressor protein will prevent RNA Polymerase from binding to template DNA sequence. This results in no production of SLAC. Transcription1 and Translation1 in the flow diagram illustrate the process of lacI repressor protein formation resulting in plasmid_lacI_complex.
+                              <ol>
+                                <li>
+                                  The second and the smaller compartment represents the activity of the enzyme against tetracycline.
+                                  </li>
+                              </ol>
+                            </p>
+                            <p>The reaction between enzyme and the substrate is based on Mass-action Kinetics. 
+                              The enzyme slac breaks the active tetracycline into inactive and non-toxic form. Here in the model -> slac + tet -> slac + deg_pro
+                              The dotted lines here represents that slac is both consumed and produced in the process.
+                              
+                              </p>
+                              <div class="image">
+                                <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/mat-model-compartment-2.png">
+                              </div>
+                              <div class="image">
+                                <img src="https://static.igem.wiki/teams/4372/wiki/modelling.png">
+                              </div>
+                              <table class="">
+                                <thead>
+                                <tr>
+                                <th>Sr. No.</th>
+                                <th>Name</th>
+                                <th>Value</th>
+                                <th>Units</th>
+                                </tr>
+                                </thead>
+                              
+                                <tbody>
+                                <tr>
+                                <td>1</td>
+                                <td>E. coli</td>
+                                <td>1.0000e-3</td>
+                                <td>milliliter</td>
+                                </tr>
+                                <tr>
+                                <td>2</td>
+                                <td>mRNA</td>
+                                <td>0</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>3</td>
+                                <td>plasmid</td>
+                                <td>500</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>4</td>
+                                <td>lacl_mrna</td>
+                                <td>0</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>5</td>
+                                <td>lacl</td>
+                                <td>50</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>6</td>
+                                <td>plasmid_lacl_complex</td>
+                                <td>0</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>7</td>
+                                <td>iptg</td>
+                                <td>0</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>8</td>
+                                <td>lacl_iptg_complex</td>
+                                <td>0</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>9</td>
+                                <td>lacli_iptg_plasmid_complex</td>
+                                <td>0</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>10</td>
+                                <td>soil</td>
+                                <td>1</td>
+                                <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                <td>11</td>
+                                <td>slac</td>
+                                <td>0</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>12</td>
+                                <td>tet</td>
+                                <td>5000</td>
+                                <td>molecule</td>
+                                </tr>
+                                <tr>
+                                <td>13</td>
+                                <td>deg_pro</td>
+                                <td>0</td>
+                                <td>molecule</td>
+                                </tr>
+                                </tbody>
+                                </table>
+                                <table class="">
+                                  <thead>
+                                  <tr>
+                                  <th>Sr. No.</th>
+                                  <th>Name</th>
+                                  <th>Value</th>
+                                  <th>Uniits</th>
+                                  <th>Scope</th>
+                                  </tr>
+                                  </thead>
+                                  
+                                  <tbody>
+                                  <tr>
+                                  <td>1</td>
+                                  <td>kt</td>
+                                  <td>0.0125</td>
+                                  <td>nanomolarity/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>2</td>
+                                  <td>ktr</td>
+                                  <td>1</td>
+                                  <td>1/second</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>3</td>
+                                  <td>ktd</td>
+                                  <td>0.1824</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>4</td>
+                                  <td>ktrd</td>
+                                  <td>1</td>
+                                  <td>1/second</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>5</td>
+                                  <td>kr</td>
+                                  <td>1</td>
+                                  <td>1/(second*molecule)</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>6</td>
+                                  <td>kf</td>
+                                  <td>0.2000</td>
+                                  <td>1/second</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>7</td>
+                                  <td>Vm_2</td>
+                                  <td>1</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>8</td>
+                                  <td>n_2</td>
+                                  <td>1</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>9</td>
+                                  <td>Kp_2</td>
+                                  <td>1</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>10</td>
+                                  <td>kf_5</td>
+                                  <td>1</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>11</td>
+                                  <td>kf_6</td>
+                                  <td>0.0690</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>12</td>
+                                  <td>max_plasmid</td>
+                                  <td>500</td>
+                                  <td>molecule</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>13</td>
+                                  <td>max_lacl</td>
+                                  <td>180</td>
+                                  <td>molecule</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>14</td>
+                                  <td>max_iptg</td>
+                                  <td>1000</td>
+                                  <td>molecule</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>15</td>
+                                  <td>kf_1</td>
+                                  <td>1</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>16</td>
+                                  <td>kr_1</td>
+                                  <td>0.1000</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>17</td>
+                                  <td>kf_2</td>
+                                  <td>1</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  <tr>
+                                  <td>18</td>
+                                  <td>kr_2</td>
+                                  <td>0.1000</td>
+                                  <td>1/minute</td>
+                                  <td>model</td>
+                                  </tr>
+                                  </tbody>
+                                  </table>
+                              <div class="image">
+                                <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/mat-model-graph-1.png">
+                                <p>Fig 1 when IPTG conc is zero. We can see there is no protein production
+                                </p>
+                              </div>
+                              <div class="image">
+                                <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/color-code-mat.png">
+                              </div>
+                              <div class="image">
+                                <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/mat-model-graph-2.png">
+                                <p>Fig 2  when IPTG conc is 500 molecules. We can clearly see the slac production and even tetracycline degradation.
+                                </p>
+                              </div>
+                              <div class="image">
+                                <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/mathmodeeling.png">
+                              
+                              </div>
+                              <p>
+                                In repeated assignments we input some repeated relations which depict a working relationship between two or more components in the model such that the model remains valid even if a change in the values of the involved components occurs. Each individual component in itself could involve multiple components which contributes to an overall net reaction of the involved component or could be unique in itself. For instance plasmid_lacI complex is a net relation of the plasmid interaction with lacI levels in the microenvironment. 
+
+                              </p>
+                              <h1 id="Conclusion">Conclusion</h1>
+                              <p>The main problem with this model is that we haven’t optimized it for experimental value. Due to time constraints we weren’t able to reach the expected level of the project. But this is a generalized model that explains the expected pathway of small laccase production in transformed E.coli (BL21). Also This can definitely help future igem teams who will be taking similar problems for their project.
+                              </p>
+                              
+                            <p>
+                              We believe that following our protocols can help future iGEM teams conduct experiments in laboratory conditions with common lab reagents for simple genetic engineering experiments. 
+                              <br>
+                              We developed various mutants of our SLac enzyme with varying efficiency and working conditions using MD simulations and molecular docking. 
+
+                            </p>
+                            <hr>
+                            <div class="image">
+                              <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/contribution.png">
+                            </div>
+                     
+                            <p>
+                              We believe that future iGEM teams can use our mutants as a basis for further studies into the use and applications of SLac. 
+<br>
+
+                            </p>
+                            <div class="image">
+                              <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/contribution2.png">>
+                            </div>
+                            
+                            <p>We have also developed a mathematical model of slac expression control and enzymatic activity. The model could be of help for the future IGEM teams. </p>
+                        </article>
+
+  
+    </div>
+  </div>
+</main>
+
+
+
+{% endblock %}

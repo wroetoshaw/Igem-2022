@@ -1,0 +1,582 @@
+@font-face { font-family: heading; 
+    src: url('../static/Lato-Black.ttf'); }
+    @font-face { font-family: body; 
+        src: url('../static/Roboto-Medium.ttf'); }
+
+main {
+    padding: 3rem 0 2rem 0;
+    
+  }
+main .custom-container {
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+
+/** * Main Content **/
+
+/** * Header for Contents Pages **/
+header {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+}
+header .custom-container {
+    padding: 0;
+    max-width: 1380px;
+    width: 100%;
+    position: relative;
+}
+header #header-background {
+    position: absolute;
+    height: 75%;
+    width: 40%;
+    right: 10%;
+    top: 8%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+header #heading {
+    bottom: calc(2rem + 2vw);
+    margin-left: 1rem;
+    position: absolute;
+}
+header #heading h1 {
+    color: white;
+    font-family: "heading";
+    font-weight: 700;
+    font-size: calc(3rem + 4.5vw);
+}
+header #bg-attribution {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    display: block;
+    background-image: url(https://static.igem.wiki/teams/4372/wiki/contents-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(225deg) brightness(112%) contrast(100%);
+    margin: 0 15px 30px 0;
+}
+
+
+.content.fullwidth {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+main .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.content {
+    font-family: "body", serif;
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+.content article {
+    padding: calc(1rem + 1vw);
+    /* width: 65rem; */
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+.sidebar a{
+    font-size: 1.5rem;
+}
+.content h1, .content h2, .content h3 {
+    font-family: "heading";
+}
+.content h1 {
+    font-weight: 400;
+    font-size: 3.25rem;
+    margin: 1.5rem 0 0.5rem 0;
+    word-spacing: 0.3rem;
+}
+.content h1:first-of-type {
+    margin-top: 0;
+}
+.content h1 button {
+    font-weight: 400;
+    margin-right: 25px;
+}
+.content h1, .content h2 {
+    scroll-margin-top: 140px;
+}
+.content h1 .anchor, .content h2 .anchor {
+    float: left;
+    line-height: 2;
+    opacity: 0.01;
+    background-image: url(../assets/icons/link-solid.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: visible;
+    filter: invert(56%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(87%) contrast(84%);
+    border: 0px transparent solid;
+    transition: all ease 0.2s;
+}
+.content h1:hover .anchor, .content h2:hover .anchor {
+    opacity: 100;
+}
+.content h2 {
+    font-size: 2.5rem;
+    word-spacing: 0.3rem;
+    margin-top: 1.5rem;
+}
+.content h3 {
+    font-size: 1.5rem;
+    word-spacing: 0.3rem;
+    margin-top: 1.5rem;
+}
+.content button.section {
+    font-size: 2rem;
+    color: #bdbdbd;
+    padding: 0;
+}
+.content button.section:focus {
+    box-shadow: none;
+}
+.content button.section:hover {
+    text-decoration: none;
+    color: #828282;
+}
+.content p {
+    font-weight: 400;
+    font-size: 1.55rem;
+    line-height: 1.75;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.content li {
+    font-weight: 400;
+    font-size: 1.55rem;
+    word-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+
+    /* overflow: hidden; */
+}
+.content p .MathJax_Display {
+    overflow: auto;
+    overflow-y: hidden;
+}
+.content p span {
+    scroll-margin-top: 200px;
+}
+.content p span:target {
+    animation: target-fade 3s 1;
+}
+.content li {
+    font-weight: 400;
+    /* font-size: 1.1rem; */
+    line-height: 2x;
+    word-spacing: 0.1rem;
+    color: #3d3d3d;
+}
+.content mark {
+    background: blue;
+}
+.content .image {
+    text-align: center;
+}
+.content .image img {
+    margin: 20px;
+    width: 90%;
+}
+.content .image p {
+    text-align: center;
+    font-style: italic;
+    color: black;
+}
+.content blockquote {
+    font-size: 1.4em;
+    width: 60%;
+    margin: 50px auto;
+    font-style: italic;
+    color: #555;
+    padding: 1.2em 30px 0.7em 75px;
+    line-height: 1.6;
+    position: relative;
+}
+.content blockquote::before {
+    font-family: "body";
+    content: "\201C";
+    font-size: 6rem;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+.content blockquote::after {
+    content: "";
+}
+.content blockquote strong {
+    display: block;
+    color: #333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+}
+.image p {
+    text-align: center;
+    font-style: italic;
+    color: #3d3d3d;
+}
+.content table {
+    border: 1px solid red;
+    width: 100%;
+    margin: 1.5rem 0 1rem 0;
+    color: #212529;
+    border-collapse: collapse;
+}
+.content table thead th, .content table thead td {
+    vertical-align: bottom;
+    border-bottom: 2px solid red;
+}
+.content table tbody th, .content table tbody td {
+    border: 1px solid red;
+}
+.content table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.content table th, .content table td {
+    padding: 0.75rem;
+    vertical-align: center;
+    border: 1px solid red;
+}
+.content table a:hover {
+    text-decoration: underline;
+}
+.content table caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 15px;
+    font-family: "body", serif;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #6c757d;
+    caption-side: bottom;
+}
+.content span.in-text:hover {
+    cursor: pointer;
+}
+.content a.citation {
+    color: black;
+    scroll-margin-top: 200px;
+}
+.content a.citation:target {
+    animation: target-fade 3s 1;
+}
+.content dfn {
+    border-bottom: 1px solid black;
+}
+.content .table-wrapper {
+    overflow: auto;
+}
+
+.content a{
+    text-decoration: none;
+    text-align:justify;
+}
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+/* SIDEBAR */
+.sidebar {
+    padding: 30px 50px 0 5px;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.sidebar #contents, .sidebar #months {
+    position: sticky;
+    top: 150px;
+    font-size: 1.05rem;
+    font-family: "body", sans-serif;
+    font-weight: 500;
+    height: auto;
+    transition: none;
+}
+.sidebar #contents li, .sidebar #months li {
+    margin: 10px 0;
+    justify-content: left;
+    list-style: none;
+    display: flex;
+}
+.sidebar #contents li span, .sidebar #months li span {
+    padding-top: 2px;
+}
+.sidebar #contents li span div, .sidebar #months li span div {
+    background: no-repeat url(https://igembitsgoa.github.io/wiki/assets/icons/contents-arrow.svg);
+    width: 1.4rem;
+    height: 1.4rem;
+    background-size: contain;
+    margin: auto;
+}
+.sidebar #contents li a, .sidebar #months li a {
+    margin-left: 10px;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 6px;
+    transition: color 0.5s;
+    color: black;
+}
+.sidebar #contents li a:before, .sidebar #months li a:before, .sidebar #contents li a:after, .sidebar #months li a:after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+}
+.sidebar #contents li a:before, .sidebar #months li a:before {
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+}
+.sidebar #contents li a:after, .sidebar #months li a:after {
+    opacity: 0;
+    transform: translateY(4px);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+    width: 100%;
+}
+.sidebar #contents li a:hover:before, .sidebar #months li a:hover:before, .sidebar #contents li a:focus:before, .sidebar #months li a:focus:before, .sidebar #contents li a.active:before, .sidebar #months li a.active:before, .sidebar #contents li a:hover:after, .sidebar #months li a:hover:after, .sidebar #contents li a:focus:after, .sidebar #months li a:focus:after, .sidebar #contents li a.active:after, .sidebar #months li a.active:after {
+    opacity: 1;
+    transform: translateY(0);
+}
+.sidebar #contents li a:hover:before, .sidebar #months li a:hover:before, .sidebar #contents li a:focus:before, .sidebar #months li a:focus:before, .sidebar #contents li a.active:before, .sidebar #months li a.active:before {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+}
+.sidebar #contents li a:hover:after, .sidebar #months li a:hover:after, .sidebar #contents li a:focus:after, .sidebar #months li a:focus:after, .sidebar #contents li a.active:after, .sidebar #months li a.active:after {
+    transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
+}
+
+/* collapsable*/
+#collapsibleSections {
+    transition: all 0.3s ease;
+}
+#collapsibleSections h2 {
+    margin-top: 0;
+}
+#collapsibleSections .card {
+    margin: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    transition: all 0.3s ease;
+}
+#collapsibleSections .card-header {
+    padding: 0;
+}
+#collapsibleSections .card-header button {
+    transition: all 0.3s ease;
+    padding: 0.75rem 1rem;
+}
+#collapsibleSections .card-header button:hover, #collapsibleSections .card-header button:not(.collapsed), #collapsibleSections .card-header button:focus {
+    color: white;
+    text-decoration: none;
+}
+#collapsibleSections button {
+    font-size: 1.2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#collapsibleSections button i {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+}
+#collapsibleSections button .icon-dropdown {
+    background-image: url(../assets/icons/down-arrow.svg);
+}
+#collapsibleSections button:not(.collapsed) i {
+    transform: rotate(90deg);
+}
+embed {
+    width: 100%;
+    height: 1200px;
+}
+/* media querries */
+
+
+@media only screen and (max-width: 1960px) {
+    header .custom-container, main .custom-container {
+        max-width: 1780px;
+   }
+    .content h1 {
+        font-size: 2.25rem;
+   }
+    .content h2 {
+        font-size: 1.75rem;
+   }
+    .content h3 {
+        font-size: 1.5rem;
+   }
+    .content li, .content p {
+        font-size: 1.5rem;
+    }
+   .content a{
+        font-size: 1.5rem;
+   }
+    
+}
+
+@media only screen and (max-width: 1400px) {
+    header .custom-container, main .custom-container {
+        max-width: 1340px;
+   }
+    .content h1 {
+        font-size: 2.25rem;
+   }
+    .content h2 {
+        font-size: 1.75rem;
+   }
+    .content h3 {
+        font-size: 1.5rem;
+   }
+    .content li, .content p {
+        font-size: 1rem;
+    }
+   .content a{
+        font-size: 1rem;
+   }
+    
+}
+
+@media only screen and (max-width: 1200px) {
+    header .custom-container, main .custom-container {
+        max-width: 1140px;
+   }
+   .sidebar a{
+    font-size:0.8rem;
+   }
+   .navbar {
+    max-height: 5rem;
+   }
+   .navbar-brand a{
+    font-size: 1.5rem !important;
+}
+#navbar-row {
+    grid-column-gap: 40rem;
+}
+    
+}
+
+@media only screen and (max-width: 992px) {
+    header .custom-container, main .custom-container {
+        max-width: 950px;
+   }
+   
+    main .content h1 {
+        font-size: 2rem;
+   }
+    main .content h2 {
+        font-size: 1.5rem;
+   }
+    main .content h3 {
+        font-size: 1.25rem;
+   }
+   .sidebar a{
+    font-size: 1rem;
+   }
+    .controls{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .navbar {
+        max-height: 4.5rem;
+    }
+    .navbar-brand{ font-size: 1.5rem !important; }
+    
+}
+    
+
+
+@media only screen and (max-width: 768px) {
+    header .custom-container, main .custom-container {
+        max-width: 750px;
+   }
+    embed {
+        height: 950px;
+   }
+    header {
+        min-height: 70vh;
+   }
+    header #header-background {
+        width: 60%;
+        right: 17%;
+   }
+    header #heading {
+        margin-left: 1.5rem;
+        bottom: 5%;
+   }
+    main .sidebar {
+        display: none;
+   }
+    main .content {
+        flex: 0 0 100%;
+        max-width: 100%;
+   }
+    main .content h1 {
+        font-size: 1.75rem;
+   }
+    main .content img {
+        width: 90% !important;
+   }
+   .controls{
+    grid-area: 1 / 2 / 2 / 3;
+}
+#navbar-row {
+    grid-column-gap: 20rem;
+}
+    
+}
+
+@media only screen and (max-width: 576px) {
+    header .custom-container, main .custom-container {
+        max-width: 540px;
+   }
+    embed {
+        height: 600px;
+   }
+    header {
+        min-height: 60vh;
+   }
+    header #heading-background {
+        height: 80%;
+        width: 70%;
+   }
+    header #heading {
+        margin-left: 0.8rem;
+        margin-bottom: calc(1.5rem + 0.2vw);
+   }
+    header #heading h1 {
+        font-size: calc(3rem + 1.75vw);
+   }
+    header #bg-attribution {
+        margin: 0 15px 15px 0;
+   }
+    main .content {
+        padding-left: 0;
+        padding-right: 0;
+   }
+    main .content article {
+        padding: calc(1.5rem + 0.2vw);
+   }
+   .controls{
+    grid-area: 1 / 2 / 2 / 3;
+}
+#navbar-row {
+    grid-column-gap: 10rem;
+}
+}
+

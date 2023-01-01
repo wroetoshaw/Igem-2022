@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+  
+{% block title %}Implementation{% endblock %}
+{% block lead %}Explain how you would implement your project in the real world.{% endblock %}
+
+{% block page_content %}
+
+
+<main class="theme-project">
+  <div class="custome-container">
+    <div class="row">
+      <div class="sidebar">
+      <div class="nav-bar-description" id="contents">
+        <ul>
+          <li>
+            <span><div></div></span><a href="#Overview">Overview</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Implementation">Implementation</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Endusers">End-Users</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Safety">Safety</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Feedback">Feedback</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#BMC">Business Model Canvas</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Challenges">Challenges</a>
+          </li>
+          
+        </ul>
+      </div>
+      </div>
+       <div class="content">
+                        <article>
+                            <h1 id="Overview">Overview</h1>
+                            <p>
+                              The misuse of antibiotics in cow feed results in antibiotic resistance (ABR), which is the ability of bacteria to survive even in the presence of drugs intended to kill them. This is especially a problem in India, an agriculturally-intensive country with substantial dependence on cattle. One of the main factors contributing to ABR is a lack of awareness of antibiotic resistance. Drug-resistant bacteria are more likely to infect humans when they are used on animals, either directly through infection or indirectly through the introduction of resistance genes into human diseases from agriculture.                             </p>
+                            <p>
+                              This is a seriously overlooked problem area that deserves timely attention. Previous enzyme engineering-inspired solutions have attempted to employ multi-copper oxidases such as laccases that are known for their degradation capabilities. However, they have the potential to be made more effective as well as specific towards cattle-care drugs such as oxytetracycline, which is what we have ventured to accomplish in our project.                             </p>
+                            <p>
+                              Our solution utilizes a lesser-known, but an equally potent member of the multicopper oxidase family, known as small laccase. Extensive background research on small laccase has established that not only can it endure higher temperatures and a wider pH range, making it extremely suitable for India’s climate, but its smaller bulk and less complex structure render it ideal for genetic manipulation to increase its efficiency and specificity. We propose to implement our solution in such a way as to provide an affordable, relatively simple-to-use product directly marketed to farmers.                             </p>
+                              <h1 id="Implementation">Implementation</h1>
+                              <p>
+                                The process of production of the enzyme would consist of the upstream phase where the production of enzymes through engineered microbes would occur along with the scaling up of the reactions in large fermenters. After that, from the mixture, the pure, active enzyme component would have to be concentrated and isolated. After the pure enzyme component is obtained, The purified enzyme is either sold in pure form and sold to other industries, or added to consumer goods. Storage of enzymes and the form in which they are sold is of imperative importance. For our product, we can explore the gold standard lyophilization wherein the enzyme is made to be stored in a pulverized state to be activated upon adding a certain solvent to it. Another method to maintain structural rigidity would be to store them as tablets that could dissolve with a biocompatible solvent. Both these methods have the potential to ensure their shelf life is maintained and also that they can form the solution/ suspension needed, on demand. 
+Sharma, Kumar; Beniwal, Vikas (2014). Industrial Enzymes: Trends, Scope, and Relevance.
+  
+                              </p>
+                              <div class="image">
+                                <img src="https://static.igem.wiki/teams/4372/wiki/2nd-diag.svg" alt="implementation" style="width: 55%;"> <p>Fig 1- Proposed Implementation Flowchart
+                              </div>
+                              <p>
+                                Upstream - Here the focus will be on genetic engineering and the synthetic biology aspect. The small laccase will be synthesized from the gm E.coli and operational properties, such as pH, temperature, activity, and substrate affinity will be tested out on the cellular scale
+
+                              </p>
+                              <p>
+                                Process development and large-scale production - Here the optimization of bacterial culture will take place. Parameters such as media composition, pH, temperature, inducer concentration, oxygen requirements, etc. occur. Initial testing phases will occur at the flask scale level to check initial parameters. Scaling up to desktop bioreactors for enzyme production will then follow the flask scale works. Bioprocess, metabolic engineering, and other related bio-engineering activities will occur in this stage to ensure efficient parameter optimization such as aeration speed, dissolved oxygen concentration, etc. 
+
+                              </p>
+                              <p>
+                                Large-scale development will occur post-successful results in desktop bioreactors. Scaling up will occur in the fashion of 500 l, 1000 l, and 1500 l. 
+
+Downstream - Downstream processing includes both specific and non-specific separation techniques, purification, and storage techniques for the enzyme. As our idea involves the enzyme being produced extracellularly, the requirement for lysis protocols is not required. To ensure that the enzymes are able to maintain their native conformation and hence their catalytic capability, the enzyme isolation and purification protocol must be very mild. A combination of different chromatographic techniques can be employed to ensure better separation. Gold standard lyophilization will be implemented. 
+
+                              </p>
+                              <p>Sale - The enzyme will be sold as a lyophilized product. Optimizations in lyophilization will be done and activity will be monitored for each run ensuring the most optimized condition is used for providing the final product.
+                              </p>
+                              <h1 id="Endusers">End-Users</h1>
+                            <p>
+                                <ol>
+                                  <li>First and foremost, our primary end users are the <strong>farmers</strong> themselves. These people are the primary benefactors of the enzyme formulation considering they are most subject to the presence of antibiotics with the samples they deal with. The problem of antibiotic resistance rises from the soil but transporting the soil to labs to implement our solution would become over-complicated and cumbersome. Therefore, we envision creating a product that can be purchased by farmers and applied directly to the field in a controlled way. In order to popularize the product, we also intend to work hand-in-hand with <strong>village panchayats</strong> (councils) and utilize other Government contracts with subsidies. Outreach to them must be promoted and we must increase accessibility via Government related agencies and contractors that not only offer communication but also a deal of security and reassurance. Some of the potential channels under this are as follows: 
+
+                                      <ul>
+                                        <li><strong>Vets</strong> - They could sell products to the farmers as part of checkups of farm animals and can recruit more farmers as part of rolling pyramid schemes.
+                                        </li>
+                                        <li>
+                                          <strong>Camps</strong> - More awareness is to be propagated through camps and encourage farmers to be a part of this drive.
+
+                                        </li>
+                                      </ul>
+                                  </li>
+                                  <li>Even though our motivation for creating the mutant enzyme was the prevalence of antibiotic resistance and its effects on cattle and humans, this product can also be used by industry professionals to safely and effectively dispose of antibiotics that may otherwise end up in rivers or the soil via ineffective discarding. Commercial marketing of the enzyme to the industry can be done to the market by e-commerce sites. We can list completely the types, and formulations of our enzyme product and let the buyers customize their orders and quantity on their own. As an additional channel, we can also outsource these sales to our authorized vendors who can offer much more far-reaching, more on-ground points of purchase and access.  We wish to utilize enzyme engineering to specifically target 3rd generation antibiotics in the future as well, to combat the antibiotic resistance cycle.
+                                  </li>
+                                  <li>Antibiotics have now become a standard method of treatment, but with no systemized disposal techniques in place at the moment, they are often found in surface and groundwater. Not only do these antibiotics possess the ability to leach into the wastewater plants and pass by unfiltered, but they can also give rise to antibiotic resistance in this way. Therefore, we also propose to market Tetonin to waste-water treatment industries and hope to work with them in order to design an enzyme bioreactor that can be a part of the waste-water treatment process.
+                                  </li>
+                                  <li>Apart from these industrial applications, our product can also be used by researchers to conduct further scientific studies in order to make it more efficient and use it to target a large variety of commonly used antibiotics. Within this project, we have not only attempted to bring to light the properties and applications of a relatively new enzyme, SLAC, but have also attempted to provide our own rationale for its effective modifications in order to fully take advantage of its degradation capacity. This also acts as our contribution to future teams and to the synthetic biology community. </li>
+                                </ol>
+                            </p>
+                            <h1 id="Safety">Safety</h1>
+                            <p>
+                              <ul>
+                                <li>Our experiments were conducted in a standard microbiological lab, as we did not work with any organisms from risk groups. Our project consisted mainly of utilizing two microorganisms, E. coli and S. coelicolor. We aim to perform further toxicity studies on the small laccase mutants, however, we do not believe they will pose a severe hazardous risk. Moreover, the recombinant protein (enzyme) will only be employed in the manure rather than releasing the organism in the soil. following proper separation, purification, and standardization. The only toxic chemical we worked with during the project was ethidium bromide, which was used while performing agarose gel electrophoresis. 
+                                </li>
+                                <li>In order to manage any dangers that can result from poor laboratory procedures, we have remained in contact with our principal investigator and mentor. We also complied with the rules set forth by the Department of Biotechnology and followed Good Laboratory Practices. We also followed iGEM's updates on the subject to stay informed of the risks involved and have read the related safety handbooks to ensure compliance with safety standards at every stage of our project. 
+                                  s</li>
+                              </ul>
+                            </p>
+                            <h1 id="Feedback">Feedback</h1>
+                            <p>
+                              In order to ensure the success of our product on the market, we asked for feedback on our proposed solution from veterinarians and doctors as well as professors and other professionals connected to the industries. The responses from the veterinarians were primarily unanimous. They concurred with us about the rising prevalence of ABR and discussed how exactly it occurred in cattle, asking us to focus on eliminating the problem at its root, which in our case meant focusing on the cattle dung which later would be used as manure. The professors we interacted with also agreed with our decision of going down the engineered-enzyme route rather than employing chemicals. The farmer organizations we visited were willing to give Tetonin a try provided it prevented the illness in their livestock. Additionally, if we were to do field trials, they have consented to assist us. </p>
+                              <h1 id="BMC">Business Model Canvas</h1>
+                            <p>
+                              After taking to various scientists, industry experts and stakeholders, we developed the following business model canvas.</p>
+                              <div class="image">
+                              <img src="https://static.igem.wiki/teams/4372/wiki/igem-bmc.png" style="width:80%;">
+                              <p>Fig 2- Tetonin Business Model Canvas
+                              </div>
+                              <h1 id="Challenges">Challenges</h1>
+                              <p>
+                                <ol>
+                                  <li>One of the major challenges we faced while ideating the transition of Tetonin from the boardroom to the market was the uncertainty surrounding the interactions between the mutant enzyme with the varied soil. The horizontal transfer of genes from our mutant strain to other microorganisms present in the soil could potentially lead to new mutants springing up, which may or may not be harmless. Since our product is extracellular, it poses more chances of risk. We aim to resolve this by conducting further field tests and evaluating our product in a real-time environment.</li>
+                                  <li>
+                                    Residual enzyme-bioconjugates - Further literature research and wet-lab studies are required on evaluating whether degraded tetracycline does not create toxic by-compounds. This is our next step towards ensuring the product is safe and does not create further problems down the road.
+                                  </li>
+                                  <li>
+                                    Product sales always depend on the competition. There are chances that Government based agencies or any other company may create a better or cheaper alternative. We hope to combat this by evolving along with the competition and adapting to any new data reported in further studies. 
+                                  </li>
+                                </ol>
+                              </p>
+                        </article>
+
+                      
+    </div>
+  </div>
+</main>
+
+
+{% endblock %}

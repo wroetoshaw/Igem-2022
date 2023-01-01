@@ -1,0 +1,629 @@
+{% extends "layout.html" %}
+  
+{% block title %}DryLab{% endblock %}
+{% block lead %}Develop and implement education, science communication, and/or outreach materials related to synthetic biology.{% endblock %}
+
+{% block page_content %}
+
+<main class="theme-project">
+  <div class="custome-container">
+    <div class="row">
+      <div class="sidebar">
+      <div class="nav-bar-description" id="contents">
+        <ul>
+          <li>
+            <span><div></div></span><a href="#Small">Small Laccase</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#slac">SLac</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#docking">Primary Docking</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Literature">Literature Review</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#selection">Selection </a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#Molecular1">Molecular Docking </a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#dynamics">Molecular Dynamics</a>
+          </li>
+          <li>
+            <span><div></div></span><a href="#References">References</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+       <div class="content">
+                        <article>
+                            <h1 id="Small">Why small laccase?                            </h1>
+                            <p>
+                              A new family of laccases known as small laccases (SLac) was constructed to possess only two domains, contrary to the three domains typically possessed by laccases. The lack of a domain does not portray a lack of activity instead it elicits the opposite with increased specificity and efficiency. SLac forms trimers with an approximate 3-fold symmetry and head-to-tail organization of the protein chains. Each SLac monomer consists of two domains which are multicopper oxidase domains and have b-sandwich architecture. SLac binds four copper(II) ions in three different binding sites which are placed between domain 1 and domain 2 of each two neighbor chains of the trimer, contributing strongly to the stability of the trimer. The copper(II) ions are characterized by unique spectro-photometric properties and play an important role in substrate oxidation. Experiments show that all three copper sites are conserved, with SLac exhibiting high thermal and pH stability. 
+                            </p>
+                            
+                            <h1 id="Problem">Structural information about small laccase (protein of interest):
+                            </h1>
+                              <ul>
+                                <li> Small laccase from Streptomyces coelicolor A3(2)</li>
+                                <li>PDB ID - 7BDN</li>
+                                <li>Gene Size - 1029 bp</li>
+                                <li>pH Stability Range - 3 to 9</li>
+                                <li>Thermal Stability - Upto 70 degree celsius</li>
+                                <li>Better Activity</li>
+
+                              </ul>
+
+                              <p>
+                                <strong>Functional information about small laccase: </strong><br>
+                                <ul>
+                                  <li> All the copper sites are conserved with the same level of functionality although a
+                                    domain is missing.</li>
+                                  <li>SLac can be used against a variety of substrates including phenols and can withstand a
+                                    wide pH range. Example: its action against DMP, a phenolic compound, activity at a
+                                    high pH of 9.4. </li>
+                                  <li>The paramagnetic Type-1 (T1) copper is coordinated by two His residues, one Met
+                                    residue and one Cys residue. The tight coordination of T1 copper to Cys residue is 
+                                    responsible for an intense absorption band of around 600 nm, giving the blue color to
+                                    the enzyme. </li>
+                                  <li> Two His residues are coordinated to one paramagnetic Type-2 (T2) copper and three
+                                    His residues (six His residues total) are coordinated to each of the two Type-3 (T3)
+                                    coppers.</li>
+                                  
+  
+                                </ul>
+  
+                              </p>
+
+                              <div class="image">
+                                <img src="https://static.igem.wiki/teams/4372/wiki/drylab-1.png" style="width:55%;">
+                                <p>(a) Structure of SLac</p>
+
+                              </div>
+
+                              <div class="image">
+                                <img src="https://static.igem.wiki/teams/4372/wiki/drylab-2.png" style="width:55%;">
+                                <p>(b) Structure of SLac</p>
+                              </div>
+
+                              <p>
+                                <strong>Mode of action of laccase:</strong><br>
+                                The one T2 and two T3 coppers are arranged in a trinuclear cluster, which is believed to be the
+site of molecular oxygen reduction (31, 57). <strong>The catalytic cycle is thought to be initiated by
+oxidation of substrate near the T1 copper site by transfer of an electron from the substrate.</strong> In
+total, four electrons are then sequentially transferred from the T1 copper to the trinuclear
+cluster along the Cys-His pathway. Here one oxygen molecule is reduced to two water
+molecules to complete the cycle (31). 
+                              </p>
+                              <p>
+                                <strong>Two copper centers:</strong>
+                                </p>
+                                <ol>
+                                  <li>They are homo trimers 
+                                  </li><li>Both the domains are similar 
+                                  </li>
+                                  <li>The length of each peptide chain is 343 amino acids long</li>
+                                </ol>
+                                <p>
+                           
+                            <p>
+                            <strong>T1 Copper:</strong>
+                            </p>
+                            <ol>
+                              <li>It is close to the surface of the protein where the oxidation of the substrate occurs.
+                              </li><li>It is the site where the interaction starts.
+                              </li>
+                            </ol>
+                            <p>
+                            <strong>Binding cavity:</strong>
+                          </p>
+
+                          <p>
+                            Literature is scant in providing information about the binding cavity of small laccase (SLac). But according to our dry lab studies we hypothesize that the Binding Cleft is close to the T1 Cu site.
+
+                          </p>
+                          <p>Structural information about oxytetracycline (ligand):
+                          </p>
+                          <p>
+                            <ol>
+                              <li>PubChem CID - 54675779
+                              </li>
+                              <li>It is an antibacterial drug</li>
+                              <li>It has molecular weight of 460.4 </li>
+                            </ol>
+                          </p>
+
+                        
+                          <div class="image">
+                            <img src="https://static.igem.wiki/teams/4372/wiki/drylabflow.svg">
+
+                            </svg>
+                          </div>
+
+
+                          <h1 id="docking">PRIMARY DOCKING 
+                          </h1>
+                          <p>
+                            <strong>STUDIES USING AUTODOCK4:</strong><br>
+                            <strong>Aim:</strong>
+Primary docking was blind docking between SLac and oxytetracycline to find out the binding cleft.
+
+                          </p>
+                          <p>
+                            <strong>
+                              Protocol:
+                            </strong>
+                            <ol>
+                              <li>
+                                The nucleotide sequence obtained from Yadav et al. was converted into peptide sequence using Expasy Translate tool (https://web.expasy.org/translate/)
+</li><li>The structure of the protein was modeled using SWISS MODEL (https://www.expasy.org/resources/swiss-model).
+</li><li>The model used a template 7B2K (which is a mutant of the structure that is used for the study PDB: “7BDN”)
+</li><li>Since small laccase is a metallo-protein, the parameter file for copper is added from a research paper (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7587343/# ). 
+</li><li>Blind docking of SLac and oxytetracycline (runs=1000 and population size=300)
+
+                              </li>
+                            </ol>
+                          </p>
+                          <p>
+                            <strong>Result:</strong>
+                            The binding cleft is very far from the copper clusters, but based on literature we know that the binding cleft is closer to T1Cu.
+
+                          </p>
+                          <p>
+                            <strong>Conclusion:</strong>
+Targeted docking is required because we have several reasons to believe that the binding site is very close to T1Cu of the enzyme, we decided to do targeted docking enclosing this copper. But deciding the size for the grid box during docking was a difficult task.
+<br>
+We have also analyzed a few complexes submitted on PDB like 1KYA where T versicolour laccase is complexed with 2,5-xylidine. The aim was to understand the distance of complexed ligands with the T1Cu site using PYMOL. After analysis we realized that the binding site of the ligand is at a distance lesser than 10 A. (Bertrand et al; 2002)
+So it could be the site of interaction for oxytetracycline too.
+<br>
+Furthermore few amino acids are considered based on their influence in the ligand binding and enzyme activity as well as  data in literature and closeness to T1Cu. All these amino acids (amino-acids of interest)are enclosed within the gridbox before docking
+
+                          </p>
+                          <div class="image">
+                            <img src="https://static.igem.wiki/teams/4372/wiki/drylab-3.png">
+                            <p>Fig. Amino acid of interest </p>
+                          </div>
+
+                          <h1 id="Literature">Literature Review</h1>
+                          <p>
+                            <strong>Aim:
+                            </strong>
+                              To find out the binding cleft present near the copper sites. The blind docking performed demanded a more targeted docking and therefore, a thorough literature search was required to decide the target site for docking.
+
+                          </p>
+                          <!-- <p>
+                            <strong>Findings:
+                            </strong>
+                            <ol>
+                              <li>
+                                Analysis of active laccase bound with 2,5-Xylidine indicated that t1 Cu could be the site of interaction for oxytetracycline too (Bertrand et al; 2002)
+
+                              </li>
+                              <li>
+                                There are research groups that have worked with the t1 Cu
+                              </li>
+                            </ol>
+                          </p>
+                          <p> -->
+                            <p>
+
+                            
+                            <strong>Confirmation Study: </strong>
+                            Using Pymol, the distance between the residues and t1 Cu were analysed and was found
+to be 10Ang or lesser.
+
+                          </p> 
+                          <p>
+                            Before docking using autodock, an online server CB-Dock 2(uses vina) was used to search for potential substrate binding cavities, closer to T1Cu on the protein surface. The cavity search was done using both a single chain and all the 3 chains. In both the cases we found one cavity mainly formed by the amino acid of interest.
+                          </p>
+                          <p>Inference from literature review:</p>
+<p><strong>Why t1 Cu is our interest? </strong></p>
+<p><ol><li>
+  Binding site is close to the copper center, specifically t1 copper.
+
+</li>
+<li>
+  There are research groups that have tried to mutate amino acids near the t1 Cu to improve efficiency of SLac
+
+</li></ol></p>
+<p><strong>Results of the CB-Dock 2:
+</strong>
+<ol>
+  <li>The amino acids making this cavity are very close to the copper clusters. This includes M198, Y229, E229,Y230, V290, H293 etc
+  </li>
+</ol></p>
+
+
+<!-- 
+
+<h1 id="molecular" >MOLECULAR DOCKING
+</h1>
+<p>
+  <strong>(SITE-SPECIFIC DOCKING) USING CB-DOCK 2:</strong><br>
+  <strong>Aim:  </strong>
+    To find the best binding pose for the selected cavity chosen using the results of the CB-Dock 2
+
+</p>
+<p>
+  <strong>Results:</strong>
+  <ol><li>The docking score was generated using Autodock vina
+  </li>
+<li>Oxytetracycline bound to the selected to the selected pose with a score of 7.2
+</li></ol>
+</p>
+<p>
+  For creating mutants the important thing is to find out the potential sites of mutation. The selection of potential points of mutation is based on thorough literature search and from the list of amino-acids of interest.
+<br>Now to induce mutation we considered certain factors like hydrophobicity, reduction potential, size of amino acid and its closeness to T1Cu.
+
+</p>
+<p>
+  It is experimentally verified that by changing the amino acid near the T1Cu by more hydrophobic amino acid or AA that can increase the overall reduction potential of the enzyme, affects the overall activity or substrate specificity if the SLac. 
+Similarly to accommodate different substrates, few researchers  also tried to redesign the substrate binding cleft by replacing bulkier amino acids with the Gly or Ala. 
+
+</p>
+<p>
+  Factors may affect activity and specificity
+<ol>
+  <li>
+    Hydrophobicity (more hydrophobic amino acids contributes to more substrate specificity)
+    </li>
+    <li>Bulkier or not (less bulky amino acids contributes to more flexibility)
+    </li>
+    <li>Redox potential (higher redox potential contributes to increase in activity)
+    </li>
+</ol>
+</p> -->
+
+<h1 id="selection">Mutants Selection</h1>
+<p>
+  For hypothesising benefical mutants, finding out the potential sites of mutation is
+  crucuial. The selection of potential points of mutation is based on literature search and
+  from the list of amino-acids of interest. Inorder to induce mutation, we considered
+  certain factors. </p>
+
+<p>
+  <strong>Factors considered for mutation: </strong>
+  <ol>
+    <li>Hydrophobicity (more hydrophobic amino acids contributes to more substrate
+      specificity) 
+    </li>
+    <li>Bulkier or not (less bulky amino acids contributes to more flexibility)
+    </li>
+    <li>Redox potential (higher redox potential contributes to increase in activity) </li>
+  </ol>
+  
+</p>
+<p>
+  It is experimentally verified that by substituting the amino acid near the T1 Cu with a
+more hydrophobic amino acid that can increase the overall reduction potential of the
+enzyme, affects the overall activity or substrate specificity of the SLac. Similarly to
+accommodate different substrates, few researchers also tried to redesign the substrate
+binding cleft by replacing bulkier amino acids with the Gly or Ala. 
+</p>
+
+<p>
+  <strong>Findings of the comparison: </strong>
+  <ol>
+    <li>His and Cys are highly conserved across all SLac, indicating that they play a role
+      in the enzyme’s activity. 
+    </li>
+    <li>Isoleucine is the most hydrophobic amino acid and is one amino acid that is
+      common in all SLac. 
+    </li>
+  </ol>
+  <br>
+  <p>Considering everything, 10 mutants including two double mutants were chosen. 
+</p>
+</p>
+
+<table class="">
+  <thead>
+  <tr>
+  <th>Sr. No</th>
+  <th>Single Mutation&nbsp;</th>
+  <th>Double Mutation</th>
+  <th>To</th>
+  <th>To</th>
+  <th>Mutant</th>
+  <th>Rationale</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>1</td>
+  <td>Tyrosine (Tyr230)</td>
+  <td>&nbsp;</td>
+  <td>Alanine (Ala230)</td>
+  <td>&nbsp;</td>
+  <td>Y230A</td>
+  <td>Literature search: mutant showed a 10-fold increase in activity</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Tyrosine (Tyr230)</td>
+  <td>&nbsp;</td>
+  <td>Glycine (Gly230)</td>
+  <td>&nbsp;</td>
+  <td>Y230G</td>
+  <td>Replacement of tyrosine with a non-bulky hydrophobic residue similar to alanine - presumed to give a similar increase in activity</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Tyrosine (Tyr229)</td>
+  <td>Tyrosine (Tyr230)</td>
+  <td>Alanine (Ala229)</td>
+  <td>Alanine (Ala230)</td>
+  <td>Y229A Y230A</td>
+  <td>Literature search: mutant showed a 10-fold increase in activity</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Methionine (Met198)</td>
+  <td>&nbsp;</td>
+  <td>Glycine (Gly198)</td>
+  <td>&nbsp;</td>
+  <td>M198G</td>
+  <td>Replacement of axial Met with a non-bulky hydrophobic residue increases the redox potential</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Methionine (Met298)</td>
+  <td>&nbsp;</td>
+  <td>Glycine (Gly298)</td>
+  <td>&nbsp;</td>
+  <td>M298G</td>
+  <td>Replacement of Met with a non-bulky hydrophobic residue increases the redox potential</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Methionine (Met198)</td>
+  <td>Methionine (Met298)</td>
+  <td>Glycine (Gly198)</td>
+  <td>Alanine (Ala298)</td>
+  <td>M198G M298A</td>
+  <td>Replacement of Met with non-bulky hydrophobic residues increases the redox potential</td>
+  </tr>
+  <tr>
+  <td>7</td>
+  <td>Valine (Val290)</td>
+  <td>&nbsp;</td>
+  <td>Isoleucine (Ile290)</td>
+  <td>&nbsp;</td>
+  <td>V290I</td>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+  <td>8</td>
+  <td>Valine (Val290)</td>
+  <td>&nbsp;</td>
+  <td>Leucine (Leu290)</td>
+  <td>&nbsp;</td>
+  <td>V290L</td>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+  <td>9</td>
+  <td>Threonine (Thr232)</td>
+  <td>&nbsp;</td>
+  <td>Isoleucine (Ile232)</td>
+  <td>&nbsp;</td>
+  <td>T232I</td>
+  <td>&nbsp;</td>
+  </tr>
+  <tr>
+  <td>10</td>
+  <td>Threonine (Thr232)</td>
+  <td>&nbsp;</td>
+  <td>Proline (Pro232)</td>
+  <td>&nbsp;</td>
+  <td>T232P</td>
+  <td>&nbsp;</td>
+  </tr>
+  </tbody>
+  </table>
+
+<p>
+  So we decided to perform molecular docking enclosing T1 Cu and other amino-acids of
+interest using autodock vina. Before performing docking we optimized all the protein
+structures running MD simulations for 25 ns. 
+</p>
+
+<div class="image">
+  <img src="https://static.igem.wiki/teams/4372/wiki/drylab-4.png" alt="drylab1"></src>
+  <p>Fig. - Parameters for MD 
+  </p>
+</div>
+
+<h1 id="Molecular1">MOLECULAR DOCKING:
+</h1>
+<p>
+  <strong>Flow chart:</strong>
+</p>
+<div class="image">
+  <img src="https://static.igem.wiki/teams/4372/wiki/drylab-5.png">
+</div>
+<p>
+  <strong>Aim:</strong><br>
+To identify the active sites.
+<strong>Softwares used:</strong><br>
+Autodock, SPDBV, Obabel, PLIP online software
+<strong>Protocol followed:</strong><br>
+<ul>
+  <li>The protein (Small laccase) was energy minimized using SPDBV software.
+  </li>
+  <li>The ligand (Oxytetracycline) was energy minimized using Obabel with the force field set as MMFF94.
+  </li>
+  <li>The grid dimensions were obtained from coordinates of active site amino acids (amino acid residues 194, 197, 199, 251, 252, 256, 261).
+  </li>
+  <li>While performing autodocking, certain parameters pertaining to the Genetic Algorithm were changed for better results namely, the number of GA runs (set as 50) and population size (set as 300).
+  </li>
+</ul>
+
+</p>
+<p>
+  <strong>Results:</strong>
+</p>
+<div class="image">
+  <img src="https://static.igem.wiki/teams/4372/wiki/drylab2.png">
+<p>Fig . Molecular docking between various mutants and Oxytetracycline(8 single mutants, 2 double mutants and 1 wild type)</p>
+</div>
+
+<p>
+  It was evident after molecular docking result that the suggested double mutant could perform
+well. Researchers have worked with single mutants of laccases. Molecular docking results
+exhibited thats the predicted mutants are showing good results than the existing ones and the
+hypothesised double mutant M198G & M298A outperforms all the other double mutants in
+terms of binding energy, even the existing double mutant Y229A & Y230A . To conclude, a
+comparison between the existing (Y229A & Y230A) and the predicted double mutant (M198G &
+M298A) was done. 
+</p>
+
+<table class="">
+  <thead>
+  <tr>
+  <th>Sr. No.</th>
+  <th>Mutants</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>1</td>
+  <td>M198G</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>M298A</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>M198G & M298A + Oxytetracycline (OXA)</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Y229A</td>
+  </tr>
+  <tr>
+  <td>5</td>
+  <td>Y230A</td>
+  </tr>
+  <tr>
+  <td>6</td>
+  <td>Y229A & Y230A + Oxytetracycline (OXA)</td>
+  </tr>
+  </tbody>
+  </table>
+
+
+<p>
+  To understand the stability of protein and ligand-protein complex we decided to go for
+molecular dynamic simulation. We performed MDS for the single mutants individually Y229A,
+Y230A M198G and M298A and then double mutants too (Y229A & Y230A) and (M198G &
+M298A). MD S data of single mutants will help us to understand the effect of single mutation 
+on the stability of the ligand-protein complex. This will also help us understand the counter or
+synergistic effect of the double mutations. 
+</p>
+
+<h1 id="dynamics">MOLECULAR DYNAMICS:</h1>
+<p>
+  Molecular dynamics (MD) simulations were performed to predict how a disruption or change will affect a biomolecular system’s stability. Simulations of the ten mutants and the wild-type protein were performed for 25 nanoseconds using the software Desmond 
+
+<br>Molecular dynamics was done for 200ns.
+
+</p>
+<div class="image">
+  <img src="https://static.igem.wiki/teams/4372/wiki/drylab-6.png">
+  </div>
+<p>
+  <strong>Inference:</strong><br>
+The graph explains that the single mutant M298A  is more stable than the single mutant M198G and the double mutant M198G and M298A which is suggested in the literature.
+
+</p>    
+<div class="image">
+  <img src="https://static.igem.wiki/teams/4372/wiki/drylab-7.png">
+  </div>
+<p>
+  <strong>Inference:</strong><br>
+  The graph explains that the double mutant Y299A and Y230A is more stable than the single mutants Y229A and Y230A which are suggested mutant in the literature.
+<br>We can clearly see that our double mutant is very stable over 100ns compare to the existing mutant  Y229A and Y230A
+<br>So MD results have provided assurity to continue our study with the predicted double mutant M198G and M298A.
+</p>     
+
+
+
+
+                     
+                        </article>
+
+                        <article id="references">
+                            <h1 id="References">References</h1>
+                            <p><a class="effect-underline">
+                                [1] Xu, F., Shin, W., Brown, S. H., Wahleithner, J. A., Sundaram, U. M., & Solomon, E. I. (1996). A study of a series of recombinant fungal laccases and bilirubin oxidase that exhibit significant differences in redox potential, substrate specificity, and stability. Biochimica et Biophysica Acta (BBA)-Protein Structure and Molecular Enzymology, 1292(2), 303-311
+                            </a></p>
+                            <p><a class="effect-underline">
+                                [2] Karlsson, B. G., Aasa, R., Malmström, B. G., & Lundberg, L. G. (1989). Rack‐induced bonding in blue copper proteins: Spectroscopic properties and reduction potential of the azurin mutant Met‐121→ Leu. FEBS letters, 253(1-2), 99-102.
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [3] Murphy, L. M., Strange, R. W., Karlsson, B. G., Lundberg, L. G., Pascher, T., Reinhammar, B., & Hasnain, S. S. (1993). Structural characterization of azurin from Pseudomonas aeruginosa and some of its methionine-121 mutants. Biochemistry, 32(8), 1965-1975
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [4] Murphy, L. M., Strange, R. W., Karlsson, B. G., Lundberg, L. G., Pascher, T., Reinhammar, B., & Hasnain, S. S. (1993). Structural characterization of azurin from Pseudomonas aeruginosa and some of its methionine-121 mutants. Biochemistry, 32(8), 1965-1975
+
+                            </a> </p>
+                            <p><a class="effect-underline"> [5] Olbrich, A. C., Schild, J. N., & Urlacher, V. B. (2019). Correlation between the T1 copper reduction potential and catalytic activity of a small laccase. Journal of inorganic biochemistry, 201, 110843.
+
+                                </a> </p>
+                            <p><a class="effect-underline">
+                                [6] Machczynski, M. C., Vijgenboom, E., Samyn, B., & Canters, G. W. (2004). Characterization of SLac: a small laccase from Streptomyces coelicolor with unprecedented activity. Protein science, 13(9), 2388-2397.
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [7] Kaur, R., Salwan, R., & Sharma, V. (2022). Structural Properties, Genomic Distribution of Laccases from Streptomyces and Their Potential Applications. Process Biochemistry.
+
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [8] Ding, H., Wu, Y., Zou, B., Lou, Q., Zhang, W., Zhong, J., ... & Dai, G. (2016). Simultaneous removal and degradation characteristics of sulfonamide, tetracycline, and quinolone antibiotics by laccase-mediated oxidation coupled with soil adsorption. Journal of hazardous materials, 307, 350-358.
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [9] Chater KF. Recent advances in understanding Streptomyces. F1000Res. 2016 Nov 30;5:2795. doi: 10.12688/f1000research.9534.1. PMID: 27990276; PMCID: PMC5133688.
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [10] Dasgupta, R., Gupta, K. B. S. S., Nami, F., de Groot, H. J. M., Canters, G. W., Groenen, E. J. J., &amp; Ubbink, M. (2020). Chemical Exchange at the Trinuclear Copper Center of small laccase from streptomyces coelicolor. Biophysical Journal, 119(1), 9–14.
+
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [11] Majumdar, S., Lukk, T., Solbiati, J. O., Bauer, S., Nair, S. K., Cronan, J. E., & Gerlt, J. A. (2014). Roles of small laccases from Streptomyces in lignin degradation. Biochemistry, 53(24), 4047–4058
+
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [12] Zhu, Y., Zhang, Y., Zhan, J., Lin, Y., & Yang, X. (2019). Axial bonds at the T1 Cu site of Thermus thermophilus SG0.5JP17-16 laccase influence enzymatic properties. FEBS open bio, 9(5), 986–995. https://doi.org/10.1002/2211-5463.12633
+
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                                [13] Sherif, M., Waung, D., Korbeci, B., Mavisakalyan, V., Flick, R., Brown, G., Abou-Zaid, M., Yakunin, A. F., & Master, E. R. (2013). Biochemical studies of the multicopper oxidase (small laccase) from Streptomyces coelicolor using bioactive phytochemicals and site-directed mutagenesis. Microbial biotechnology, 6(5), 588–597. https://doi.org/10.1111/1751-7915.12068
+
+
+                            </a> </p>
+                            <p><a class="effect-underline">
+                              [14] Zovo, K., Pupart, H., Van Wieren, A., Gillilan, R. E., Huang, Q., Majumdar, S., & Lukk, T. (2022). Substitution of the Methionine Axial Ligand of the T1 Copper for the Fungal-like Phenylalanine Ligand (M298F) Causes Local Structural Perturbations that Lead to Thermal Instability and Reduced Catalytic Efficiency of the Small Laccase from Streptomyces coelicolor A3(2). ACS omega, 7(7), 6184–6194. https://doi.org/10.1021/acsomega.1c06668
+
+
+                          </a> </p>
+                          
+                        </article>
+    </div>
+  </div>
+</main>
+
+
+{% endblock %}

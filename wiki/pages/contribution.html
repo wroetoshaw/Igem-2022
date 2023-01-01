@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+  
+{% block title %}Contribution{% endblock %}
+{% block lead %}Make a useful contribution for future iGEM teams. Use this page to document that contribution.{% endblock %}
+
+{% block page_content %}
+
+<main class="theme-project">
+  <div class="custome-container">
+    <div class="row">
+      <div class="sidebar">
+        <div class="nav-bar-description" id="contents">
+          <ul>
+            <li>
+              <span><div></div></span><a href="#contribution">Contribution</a>
+            </li>
+            <li>
+              <span><div></div></span><a href="#proposed">Modifications proposed</a>
+            </li>
+
+          
+            <li>
+              <span><div></div></span><a href="#References">References</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+       <div class="content">
+                        <article>
+                            <h1 id="contribution">Contribution</h1>
+                            <p>
+                              iGEM gives great importance to ‘get and give’ and an important responsibility of any iGEM team is to lay the foundation for the next generation of iGEMers to conduct their research and efficiently design their experiments. At iGEM VIT, we believe that our research and designs should not only be limited to the iGEM community but should also benefit the industry and scientists who are conducting genetic engineering and protein production experiments. 
+                            </p>
+                            <p>
+                              In our project, though we have not used parts from the registry, we have developed a plasmid specifically designed to produce SLac by incorporating a hybrid promoter system which enhances expression 9-11  fold [1] in laboratory environments and optimal conditions. With the combination of specific Trp and Lac promoter sites attached in tandem, our hybrid promoter system was proposed to be beneficial through our literature survey and a generalised model simulation developed by us. 
+                            </p>
+                            <hr>
+                            <h1 id="proposed">Modifications proposed</h1>
+                            <p>
+                              We also proposed modifications to our gene of interest, SLac (Part: BBa K3196002). We attached a secretion sequence gene (coding for OmpA signal peptide) that stimulates extracellular secretion of the protein to our gene of interest so as to make purification of the protein easier. By incorporating the OmpA gene downstream the hybrid promoter and attach it upstream to our gene of interest, we were able to attach a secretion peptide to the protein sequence so that the protein can be extracellularly produced. This makes the downstream processing of the protein easier as cell disruption techniques do not have to be adopted. To aid in the purification of the protein, we also added a sequence coding for Flag tag protein. With the help of Flag tag separation chromatography, separation of the protein becomes easier by using Flag antibodies. With the help of these modifications to our plasmid (pSF-TAC) we believe that it is not only beneficial to scientists but also to industries. 
+                            </p>
+                            <p>
+                              We also developed standard protocols for experimental procedures such as 
+                              <ol>
+                                <li>Plasmid isolation</li>
+                                <li>Tetracycline detection</li>
+                                <li>MIC assay</li>
+                                <li>Laccase activity assay</li>
+                                <li>Restriction digestion and ligation</li>
+                                <li>Enzyme optimization assay</li>
+                                <li>PCR</li>
+                                <li>Enzyme purification</li>
+                                <li>Manure handling</li>
+                                <li>Competent cell preparation and transformation</li>
+                                </ol>
+                            </p>
+                            <p>
+                              We believe that following our protocols can help future iGEM teams conduct experiments in laboratory conditions with common lab reagents for simple genetic engineering experiments. 
+                              <br>
+                              We developed various mutants of our SLac enzyme with varying efficiency and working conditions using MD simulations and molecular docking. 
+
+                            </p>
+                            <hr>
+                            <div class="image">
+                              <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/contribution.png">
+                            </div>
+                     
+                            <p>
+                              We believe that future iGEM teams can use our mutants as a basis for further studies into the use and applications of SLac. 
+<br>iGEM-VIT also conducted educational outreaches in a number of schools in India in cities such as Bengaluru, Vellore and Kolkata. We did multiple educational collaborations in pursuit of our goal to expand awareness. These include developing a playlist with renowned professionals on the ethics of synthetic biology with IISER Tirupati, developing a handbook on helping farmers with IISER B and another on helping students learn about synthetic biology with MIT MAHE, we even worked in translating content for IISc Bangalore to increase accessibility. Beyond these, we have worked on research collaborations with institutes like IITD, William and Mary College, US.
+
+                            </p>
+                            <div class="image">
+                              <img style="width:55%;"src="https://static.igem.wiki/teams/4372/wiki/contribution2.png">>
+                            </div>
+                            
+                            <p>We have also developed a mathematical model of slac expression control and enzymatic activity. The model could be of help for the future IGEM teams. </p>
+                        </article>
+
+                        <article id="references">
+                            <h1 id="References">References</h1>
+                            <p><a class="effect-underline">
+                                [1] De Boer, H. A., Comstock, L. J., & Vasser, M. (1983). The tac promoter: a functional hybrid derived from the trp and lac promoters. Proceedings of the National Academy of Sciences, 80(1), 21-25. 
+
+                            </a></p>
+                            
+                        </article>
+    </div>
+  </div>
+</main>
+{% endblock %}
